@@ -89,7 +89,7 @@ Let's design a page which displays tools available in the hardware store.
   3. Select **Tool** Entity and click **OK**.
   4. Click **No** to automatically fill the contents of the list view.
   
-   Lets start by changing the List item title to the Name of the Tools. As we want this information to be displayed from Tool entity. Do the following to achieve that:
+   Lets start by changing the **List item title** to the **Name** of the Tools. As we want this information to be displayed from Tool entity. Do the following to achieve that:
    1. Double click on List item title.
    2. Click on Edit Caption.
     <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Edit.png" alt="new app" border="2" /></p>   
@@ -100,7 +100,7 @@ Let's design a page which displays tools available in the hardware store.
    5. For the caption, replace **List item title** with parameter **{1}**.
    
    
- Lets start by changing the Secondary text to the Code of the Tools. Do the following to achieve that:
+ Lets start by changing the **Secondary text** to the **Code** of the Tools. Do the following to achieve that:
    1. Double click on Secondary text.
    2. Click on Edit Caption.
     <p><img src="/Images/Tools_Page_List_View_List_Item_Secondary_Text_Edit.png" alt="new app" border="2" /></p>   
@@ -111,16 +111,18 @@ Let's design a page which displays tools available in the hardware store.
    5. For the caption, replace **Secondary text** with parameter **HW-{1}**.
 
    Similarly, copy the code field for price attribute. Define the parameter to **Price** and caption to **${1}**.
-                                                                             
 
+Now, we will replace a static image to a dynamic image in the list view. Perform the following steps to achieve this.                            ============================                                               
+1. Delete the **Static Image** and Drag **Dynamice Image** by selecting **Dynamic Image** from left side Toolbox.
+2. Double-click the **Dynamic Image** to open Edit window.
+3. * Select **Default image** to **Mendix**.
+   * Change Width to **100** **Pixel**, **Height** to **100** **Pixel**.  
+<p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
+To define the entity which we want to connect to the Dynamic Image, Select **ToolImage** entity, click **OK**.  :
+   <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Data_Source_.png" alt="new app" border="2" /></p>
 
-
-
-
-
-
-
+  4. Click **No** to automatically fill the contents of the dynamic image.
 
 
 ====================================================================================
