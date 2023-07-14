@@ -72,9 +72,45 @@ Now we will define the following entities and association in the Domain Model.
         
 ## 5 Creating App's User Interface to Display Tools
 Let's design a page which displays tools available in the hardware store.
+### 5.1 Creating a Tools_Page
   1. From App Explorer on left side pane, right-click **MyFirstModule** and select **Add Page**.
-  2. From **Create Page**, select **List** > **List Columns** and click **OK**.
-  3.                                                                                                                                                
+  2. From **Create Page**,  Name this page **Tools_Page**. select **List** > **List Columns** and click **OK**.
+     <p><img src="/Images/AddPage_DisplayTools.png" alt="new app" border="2" /></p>
+### 5.2 Editing Page Header and Linking Back Button to Home Page
+ 1. Doube-click **Page header title**, change it to **Tools in Store** and click on **OK** to close the window.
+ 2. Double-click **Back** button, select **Show Page** from Event On click dropdown and select **Home_Web**.
+      <p><img src="/Images/Change_Back_Button.png" alt="new app" border="2" /></p>
+
+### 5.3 Connecting Tool Page to Tool Data
+  1. To connect the data to the page, double click the **List View**.
+  2. To define the entity which we want to connect to the List view, go to the **Data source** tab and click **Select**  :
+   <p><img src="/Images/Tools_Page_List_View_Data_Source_select.png" alt="new app" border="2" /></p>
+   
+  3. Select **Tool** Entity and click **OK**.
+  4. Click **No** to automatically fill the contents of the list view.
+  
+   Lets start by changing the List item title to the Name of the Tools. As we want this information to be displayed from Tool entity. Do the following to achieve that:
+   1. Double click on List item title.
+   2. Click on Edit Caption.
+    <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Edit.png" alt="new app" border="2" /></p>   
+   3. Add a **New** parameter.
+      <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Add_Parameter.png" alt="new app" border="2" /></p> 
+   4. Select **Name**
+       <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Add_Name.png" alt="new app" border="2" /></p> 
+   5. For the caption, replace **List item title** with parameter **{1}**.
+   
+   
+ Lets start by changing the Secondary text to the Code of the Tools. Do the following to achieve that:
+   1. Double click on Secondary text.
+   2. Click on Edit Caption.
+    <p><img src="/Images/Tools_Page_List_View_List_Item_Secondary_Text_Edit.png" alt="new app" border="2" /></p>   
+   3. Add a **New** parameter.
+      <p><img src="/Images/Tools_Page_List_View_List_Item_Secondart_Text_Add_Parameter.png" alt="new app" border="2" /></p> 
+   4. Select **Code**
+       <p><img src="/Images/Tools_Page_List_View_List_Item_Secondart_text_Code.png" alt="new app" border="2" /></p> 
+   5. For the caption, replace **Secondary text** with parameter **HW-{1}**.
+   6. 
+                                                                             
 
 
 
@@ -86,7 +122,7 @@ Let's design a page which displays tools available in the hardware store.
 
 
 
-
+====================================================================================
  First, we will add Card Action to the Home page to navigate to the page which displays a list of hardware tools. 
 
 1. Drag a **Card Action** building block and drop onto the **Home** page.
