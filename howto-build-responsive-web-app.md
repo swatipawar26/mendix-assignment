@@ -109,7 +109,8 @@ Let's design a page which displays tools available in the hardware store.
    4. Select **Code**
        <p><img src="/Images/Tools_Page_List_View_List_Item_Secondart_text_Code.png" alt="new app" border="2" /></p> 
    5. For the caption, replace **Secondary text** with parameter **HW-{1}**.
-   6. 
+
+   Similarly, copy the code field for price attribute. Define the parameter to **Price** and caption to **${1}**.
                                                                              
 
 
