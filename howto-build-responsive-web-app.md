@@ -64,12 +64,37 @@ Now we will define the following entities and association in the Domain Model.
 4. Click OK to close the entity’s properties window.
 ### 4.3 Creating an association 
 
-1.Create an association between the **ToolImage** and the **Tool** entities by drawing a line.
+1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line.
       <p><img src="/Images/ToolImage_Tool_Associatiom.png" alt="new app" border="2" /></p>
 2. Double-click the assocition link and select 1-1 association:
       <p><img src="/Images/ToolImage_Tool_Associatiom_Properties.png" alt="new app" border="2" /></p>
+3. Click OK to close the association’s properties window.
+        
 ## 5 Creating App's User Interface to Display Tools
+Let's design a page which displays tools available in the hardware store.
+  1. From App Explorer on left side pane, right-click **MyFirstModule** and select **Add Page**.
+  2. From **Create Page**, select **List** > **List Columns** and click **OK**.
+  3.                                                                                                                                                
 
+
+
+
+
+
+
+
+
+
+
+
+ First, we will add Card Action to the Home page to navigate to the page which displays a list of hardware tools. 
+
+1. Drag a **Card Action** building block and drop onto the **Home** page.
+2. Double-click the **Card Title** and name this card **Tools**.
+
+3. Double-click the action button to edit its properties.
+4. From **Edit Action Button** window, select **Show Page** from Event On click  dropdown.
+5. 
 ### 5.1 
 
 ## 6 Creating App's User Interface to Manage Tools
