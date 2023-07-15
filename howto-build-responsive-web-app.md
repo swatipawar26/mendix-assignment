@@ -108,11 +108,11 @@ Let's design a page which displays tools available in the hardware store.
 
    Similarly, copy the code field for price attribute. Define the parameter to **Price** and caption to **${1}**.
 
-Now, we will replace a static image to a dynamic image in the list view. Perform the following steps to achieve this.                            ============================                                               
+Now, we will replace a static image to a dynamic image in the list view. Perform the following steps to achieve this.                                                                          
 1. Delete the **Static Image** and Drag **Dynamice Image** by selecting **Dynamic Image** from left side Toolbox.
 2. Double-click the **Dynamic Image** to open Edit window.
 3. * Select Mendix image as a **Default image**.
-   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels                                                           
+   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**                                                           
 <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
 To define the entity which we want to connect to the Dynamic Image, Select **ToolImage** entity, click **OK**.  :
