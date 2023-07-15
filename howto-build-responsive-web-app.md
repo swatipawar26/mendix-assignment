@@ -146,7 +146,7 @@ Now we have a page that shows the list of tools, but there is no functionality y
   * Select **Button Style** to **Primary**.
 <p><img src="/Images/Tools_Page_AddTool_Button_Properties.png" alt="new app" border="2" /></p>
 
-## 6.1 Creating a microflow to Display Add Page
+## 6.1 Creating a Microflow to Display Add Page
 1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
 2. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
@@ -165,20 +165,23 @@ Now we have a page that shows the list of tools, but there is no functionality y
 8. Double-click on the activity and set the following properties:
   * **Entity** to **Tool**
   * **Refresh in Client** to **Yes**
-  * Add a new member and assign *NewImageTool* value.
+  * Add a new member and assign *NewToolImage* value.
    <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow_CreateToolObject.png" alt="new app" border="2" /></p>
 
 10. Drag **Show Page** activity and place it after *Create Tool* object.
 11. Double-click on the activity and from **Page Settings** window, do the following steps:
-  * Click **Select** and from **Select Web Page** select **MyFirstModule** and click **New**.
-  * Select argument for a new page as *NewTool* and click **OK**.
+  * Click **Select** and from **Select Web Page**> **MyFirstModule** and click **New**.
+  * Select argument for a new page as *NewTool* object and click **OK**.
   * Create a new page with following properties:
   *   Name: *Tool_NewEdit_Page*.
   *   Navigation layout: **PopupLayout**, so this page appears as a popup over the Tools list page.
   *   Template Category: **Forms**.
   *   Page Template: **Form vertical**.
      <p><img src="/Images/Tool_NewEdit_Page_Create.png" alt="new app" border="2" /></p> 
- 
+ Final page setting will look like as follows:
+  <p><img src="/Images/Tool_NewEdit_Page_Create_PageSettings.png" alt="new app" border="2" /></p> 
+
+  ## 6.2 Designing the Add Page
 ## 7 Read More
 
 * {Link 1}
