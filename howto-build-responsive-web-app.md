@@ -29,10 +29,6 @@ To create a new web app from template, follow these steps:
 4. The app gets initialized and the app will open on the app’s home page called Home_Web:
 <p><img src="/Images/HomePage.png" alt="new app" border="2" /></p>
 
-### 3.1 {Title of Sub-Section}
-
-{Use sub-sections for more detail.}
-
 ## 4 Creating Domain Model
 Now we will define the following entities and association in the Domain Model.
   * Tool- It holds tool information as follows:
@@ -124,18 +120,7 @@ To define the entity which we want to connect to the Dynamic Image, Select **Too
 
   4. Click **No** to automatically fill the contents of the dynamic image.
 
-                                                                                                                          
-====================================================================================                                                                                                                           
- First, we will add Card Action to the Home page to navigate to the page which displays a list of hardware tools. 
-
-1. Drag a **Card Action** building block and drop onto the **Home** page.
-2. Double-click the **Card Title** and name this card **Tools**.
-
-3. Double-click the action button to edit its properties.
-4. From **Edit Action Button** window, select **Show Page** from Event On click  dropdown.
-5. 
-### 5.1 
-
+     
 ## 6 Creating App's User Interface to Manage Tools
 Now we have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do that with the following steps:
 
@@ -241,14 +226,30 @@ Now we will add a custom logic to validate the input before saving tool object i
     The final Microflow will look like as follows:
 <p><img src="/Images/SaveTool_Microflow_Compete.png" alt="new app" border="2" /></p>
 
+## 6.3 Editing Tools Data
+Now we will enable the option to edit tools data from the tool list. Do the following steps:
+1. From The *Tools_page*, double-click the button from the list view:
+<p><img src="/Images/Tools_Page_ListView_EditButton_Link_EditWindow.png" alt="new app" border="2" /></p>
+2.  Double-click the action button to edit its properties:
 
+  * **Tooltip**: *Edit Tool*
+  * **Event On click**: select *Show Page* > *Tool_NewEdit_Page*
 
- 
-    
-    
+## 7 Linking Home_Page to Tools_Page
+Now we will add Card Action to the *Home_page* to navigate to the *Tools_page*.  
 
- 
-## 7 Read More
+1. Drag a **Card Action** building block and drop onto the **Home** page.
+2. Double-click the **Card Title** and name this card **Tools**.
+3. Double-click the action button to edit its properties.
+4. From **Edit Action Button** window, select **Show Page** from Event On click  dropdown:
+<p><img src="/Images/Home_Page_ShowPage_Tools_Page.png" alt="new app" border="2" /></p> 
+
+## 8 Run and Preview the Application
+Let's test the logic that you've just built:
+1. From **File**> click **Save All**.
+2. Click **Run Locally** and **View** app.
+
+ ## 7 Read More
 
 * {Link 1}
 * {Link2} – {an explanation when necessary especially if this is a third-party link}
