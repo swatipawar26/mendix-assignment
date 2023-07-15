@@ -213,25 +213,39 @@ We have created *Tool_NewEdit_Page* based on the Tool argument passed from *Crea
 7. Drag a **Change Object** activity from the **Toolbox** and place it after the **Commit Object** event.
 8. Double-click on the activity and set *Input Object* to **Tool** and set **Refresh in Client** to **NO** .
 9. Add a new member and assign *ToolImage* value.
-<p><img src="/Images/<p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>" alt="new app" border="2" /></p>
+<p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
 
 
 ### 6.2.2 Creating a Microflow to Save Tools
-Now we will add a custom logic to validate the input before saving tool object in database An error message will be displayed if no input is found. If input required to save the tool is given, we will save the tool and give the message.
+Now we will add a custom logic to validate the input before saving tool object in database. Depending on the validation an appropriate message will be displayed. Do the following steps to achieve this:
 
-Do the following steps to achieve this:
-
-1. Go to  *Tool_NewEdit_Page* and double-click **Save** button.
+1. Go to *Tool_NewEdit_Page* and double-click **Save**.
 2. Select **Call a microflow** from **Events On Click**.
 3. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
   * Name microflow *SaveTool_Microflow* and click **OK**.
 4. From **App Explorer**, open **SaveTool_Microflow** microflow.
+5. Drag a **Decision** box from the **Toolbox** and place it after the **Start** event.
+6. Double-click on the decision box and set **Caption** to *Tool data is provided?* and **Expression** to * Double-click on the activity and set *Input Object or List** to **ToolImage**.
+6. Double-click on the decision box, set **Caption** to *Tool data is provided?* and **Expression** to *$Tools/Name != empty and $Tool/Price !=0*.
+7. Draw a downward path for the **False** condition from the decision box and create an end event.
+8. Right-click on the same path and set **Condition Value** to **false**. This sets the other path's **condition Value** to **true**.
+9. Drag a **Show Message** from the **Toolbox** and place it over the false path.
+10. Double-click **Show Message**, select **Error** for **Type** and enter *Tools data is not provided.* in **Template**. 
+9. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Decision** box on true value path.
+10. Double-click on the activity and set *Input Object or List** to **Tool**.
+11. Set **Refresh in Client** to **Yes**and click **OK**.
+12. Drag a **Close page** activity from the **Toolbox** and place it after the **Commit Tool**.
+13. Drag a **Show Message** activity from the **Toolbox** and place it after the **Close page**.
+14. Double-click **Show Message**, enter *Tools data is saved successfully.* in **Template**.
+    The final Microflow will look like as follows:
+<p><img src="/Images/SaveTool_Microflow_Compete.png" alt="new app" border="2" /></p>
 
 
+
+ 
     
- 
- 
+    
 
  
 ## 7 Read More
