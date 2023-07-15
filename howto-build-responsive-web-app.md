@@ -1,4 +1,4 @@
-# Build a Responsive Web App Using Mendix Platform
+[-# Build a Responsive Web App Using Mendix Platform
 
 ## 1 Introduction
 This how-to will teach you how to build a responsive web app using Mendix Platform for a hardware store. We have built this app using several key concepts of Mendix like UI widgets, domain model, microflows, and so on.
@@ -116,7 +116,7 @@ Now, we will replace a static image to a dynamic image in the list view. Perform
 1. Delete the **Static Image** and Drag **Dynamice Image** by selecting **Dynamic Image** from left side Toolbox.
 2. Double-click the **Dynamic Image** to open Edit window.
 3. * Select Mendix image as a **Default image**.
-   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels                                                          **.  
+   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels                                                           
 <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
 To define the entity which we want to connect to the Dynamic Image, Select **ToolImage** entity, click **OK**.  :
@@ -146,7 +146,7 @@ Now we have a page that shows the list of tools, but there is no functionality y
   * Select **Button Style** to **Primary**.
 <p><img src="/Images/Tools_Page_AddTool_Button_Properties.png" alt="new app" border="2" /></p>
 
-## 6.1 Creating a Microflow to Display Add Page
+## 6.1 Creating a Microflow to Display Add Tool Page
 1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
 2. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
@@ -181,7 +181,59 @@ Now we have a page that shows the list of tools, but there is no functionality y
  Final page setting will look like as follows:
   <p><img src="/Images/Tool_NewEdit_Page_Create_PageSettings.png" alt="new app" border="2" /></p> 
 
-  ## 6.2 Designing the Add Page
+  ## 6.2 Designing the Add Tool Page
+We have created *Tool_NewEdit_Page* based on the Tool argument passed from *CreateObjectsForToolAndImage_Microflow* microflow. The Name, Code, and Price fields are auto-populated on the page. We will now enhance the page to upload a image and render it. Do the following steps to achieve this:
+1. Drag the **Data View Container** from **Toolbox** and place it below the **Price**.
+2. Double-click the **Data View**, from **Edit Data View** > **Data Source** > **Select Entity**>  **Page parameters**> **Tool** > select **ToolImage**. 
+<p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
+
+3. Click **No** to automatically fill the contents of the data view.
+4. Drag the **Dynamic Image** from **Toolbox** and place it in the **Data View**.
+5. Double-click the **Dynamic Image** to open Edit window.
+ * Select Mendix image as a **Default image**.
+ * Change Width to **100** **Pixels**, **Height** to **100** **Pixels.
+ * Select **Data Source** > **Entity** > **MyFirstModule.ToolImage**.
+ * Click **No** to automatically fill the contents of the dynamic image.
+6. Drag the **Container** from **Toolbox** and place it below the dynamic image.
+7. Drag the **Image Uploader** from **Toolbox** and place it inside the container.
+8. Drag the **Button** from **Toolbox** and place it inside the same container below the image uploader. Edit the **Button** properties as follows:
+  * Edit **Caption** to **Upload** and add a **Tooltip**.
+  * Select **Button Style** to **Success**.
+    
+### 6.2.1 Creating a Microflow to Upload Image
+
+1. Double-click **Upload image** and select **Call a microflow** from **Events On Click**
+2. From **Select Microflow** window, do the following steps:
+  * Select **MyFirstModule** and click **New**.
+  * Name microflow *UploadImage_Microflow* and click **OK**.
+3. From **App Explorer**, open **UploadImage_Microflow** microflow.
+4. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Start** event.
+5. Double-click on the activity and set *Input Object or List** to **ToolImage**.
+6. Set **Refresh in Client** to **Yes**and click **OK**.
+7. Drag a **Change Object** activity from the **Toolbox** and place it after the **Commit Object** event.
+8. Double-click on the activity and set *Input Object* to **Tool** and set **Refresh in Client** to **NO** .
+9. Add a new member and assign *ToolImage* value.
+<p><img src="/Images/<p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>" alt="new app" border="2" /></p>
+
+
+### 6.2.2 Creating a Microflow to Save Tools
+Now we will add a custom logic to validate the input before saving tool object in database An error message will be displayed if no input is found. If input required to save the tool is given, we will save the tool and give the message.
+
+Do the following steps to achieve this:
+
+1. Go to  *Tool_NewEdit_Page* and double-click **Save** button.
+2. Select **Call a microflow** from **Events On Click**.
+3. From **Select Microflow** window, do the following steps:
+  * Select **MyFirstModule** and click **New**.
+  * Name microflow *SaveTool_Microflow* and click **OK**.
+4. From **App Explorer**, open **SaveTool_Microflow** microflow.
+
+
+    
+ 
+ 
+
+ 
 ## 7 Read More
 
 * {Link 1}
