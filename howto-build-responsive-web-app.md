@@ -115,8 +115,8 @@ Let's design a page which displays tools available in the hardware store.
 Now, we will replace a static image to a dynamic image in the list view. Perform the following steps to achieve this.                            ============================                                               
 1. Delete the **Static Image** and Drag **Dynamice Image** by selecting **Dynamic Image** from left side Toolbox.
 2. Double-click the **Dynamic Image** to open Edit window.
-3. * Select **Default image** to **Mendix**.
-   * Change Width to **100** **Pixel**, **Height** to **100** **Pixel**.  
+3. * Select Mendix image as a **Default image**.
+   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels                                                          **.  
 <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
 To define the entity which we want to connect to the Dynamic Image, Select **ToolImage** entity, click **OK**.  :
@@ -124,8 +124,8 @@ To define the entity which we want to connect to the Dynamic Image, Select **Too
 
   4. Click **No** to automatically fill the contents of the dynamic image.
 
-
-====================================================================================
+                                                                                                                          
+====================================================================================                                                                                                                           
  First, we will add Card Action to the Home page to navigate to the page which displays a list of hardware tools. 
 
 1. Drag a **Card Action** building block and drop onto the **Home** page.
@@ -137,7 +137,48 @@ To define the entity which we want to connect to the Dynamic Image, Select **Too
 ### 5.1 
 
 ## 6 Creating App's User Interface to Manage Tools
+Now we have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do that with the following steps:
 
+1. Select and delete the two action buttons from top right side of the **Tools_Page**.
+2. Drag a **Button** from **Toolbox** and place it above the list. Edit the **Button** properties as follows:
+  * Edit **Caption** to **Add** and add a **Tooltip**.
+  * Select the button **Icon**
+  * Select **Button Style** to **Primary**.
+<p><img src="/Images/Tools_Page_AddTool_Button_Properties.png" alt="new app" border="2" /></p>
+
+## 6.1 Creating a microflow to Display Add Page
+1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
+2. From **Select Microflow** window, do the following steps:
+  * Select **MyFirstModule** and click **New**.
+  * Name microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
+  * 
+ <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow.png" alt="new app" border="2" /></p>
+  
+  * Click **OK** to close **Edit Action Button** window.
+3. From **App Explorer**, open **CreateObjectsForToolAndImage_Microflow** microflow.
+4. Drag a **Create Object** activity from the **Toolbox** and place it after the **Start** event.
+<p><img src="/Images/Tools_Page_AddTool_CreateMicroflow_CreateImageObject.png" alt="new app" border="2" /></p>
+
+5. Double-click on the activity and set **Entity** to **ToolImage**
+6. Set **Refresh in Client** to **Yes**and click **OK**.
+7. Drag another **Create Object** and place it after *Create ToolImage* object.
+8. Double-click on the activity and set the following properties:
+  * **Entity** to **Tool**
+  * **Refresh in Client** to **Yes**
+  * Add a new member and assign *NewImageTool* value.
+   <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow_CreateToolObject.png" alt="new app" border="2" /></p>
+
+10. Drag **Show Page** activity and place it after *Create Tool* object.
+11. Double-click on the activity and from **Page Settings** window, do the following steps:
+  * Click **Select** and from **Select Web Page** select **MyFirstModule** and click **New**.
+  * Select argument for a new page as *NewTool* and click **OK**.
+  * Create a new page with following properties:
+  *   Name: *Tool_NewEdit_Page*.
+  *   Navigation layout: **PopupLayout**, so this page appears as a popup over the Tools list page.
+  *   Template Category: **Forms**.
+  *   Page Template: **Form vertical**.
+     <p><img src="/Images/Tool_NewEdit_Page_Create.png" alt="new app" border="2" /></p> 
+ 
 ## 7 Read More
 
 * {Link 1}
