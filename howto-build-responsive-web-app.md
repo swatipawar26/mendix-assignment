@@ -1,4 +1,4 @@
-[-# Build a Responsive Web App Using Mendix Platform
+# Build a Responsive Web App Using Mendix Platform
 
 ## 1 Introduction
 This how-to will teach you how to build a responsive web app using Mendix Platform for a hardware store. We have built this app using several key concepts of Mendix like UI widgets, domain model, microflows, and so on.
