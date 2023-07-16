@@ -28,11 +28,11 @@ To create a new web app from template, follow these steps:
 2. Search for the **Blank Web App** and click **Use this starting point**.
 
 3. Name the app **Hardware Store App** and click the **Create app** button:
- <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/AppSettings.png" alt="new app" border="2" /></p>
+ <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/app-settings.png" alt="app-settings" border="2" /></p>
  
 4. The app gets initialized and the app will open on your home page called **Home_Web**
    
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/HomePage.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/home-page.png" alt="home-page" border="2" /></p>
 
 ## 4 Creating Domain Model
 Now you will define the following entities in the Domain Model.
