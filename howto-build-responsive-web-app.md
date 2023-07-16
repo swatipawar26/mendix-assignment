@@ -1,16 +1,17 @@
 # Build a Responsive Web App Using Mendix Platform
 
 ## 1 Introduction
-This how-to will teach you how to build a responsive web app using the Mendix Platform. This document covers several key concepts of Mendix like UI widgets, domain model, microflows, and so on.
-
-This how-to will teach you how to do the following:
-* Create a web app for a hardware store  
+This how-to will teach you to build a hardware store app using several key concepts of Mendix like UI widgets, domain model, and microflows.
+At a glance, you will know the tools available in the store and manage its details.
+This document covers how to do the following:
+* Create a new web app for a hardware store  
 * Build web pages to see the list of tools available in store
 * Add tools with images, edit the tool details
 * Navigate from one page to another 
 * Create a domain model to store tools information with image in database and render it on various pages
-* Develop microflows to build a custom logic, add validation and confirmation messages 
- Lets build a hardware store app.  At a glance, you will know the tools available in the store and manage its details.
+* Develop microflows to build a custom logic
+* Add validation and confirmation messages 
+ At a glance, you will know the tools available in the store and manage its details.
 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have completed the following prerequisites:
