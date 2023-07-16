@@ -150,99 +150,101 @@ Now you have a page that shows the list of tools, but there is no functionality 
 1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
 2. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
-  * Name microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
-  * 
+  * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
+    
  <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow.png" alt="new app" border="2" /></p>
   
   * Click **OK** to close **Edit Action Button** window.
-3. From **App Explorer**, open **CreateObjectsForToolAndImage_Microflow** microflow.
-4. Drag a **Create Object** activity from the **Toolbox** and place it after the **Start** event.
+    
+3. From the **App Explorer**, open **CreateObjectsForToolAndImage_Microflow** microflow.
+4. Drag the **Create Object** activity from the **Toolbox** and place it after the **Start** event.
 <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow_CreateImageObject.png" alt="new app" border="2" /></p>
 
-5. Double-click on the activity and set **Entity** to **ToolImage**
+5. Double-click on the activity and set **Entity** to *ToolImage*.
 6. Set **Refresh in Client** to **Yes**and click **OK**.
-7. Drag another **Create Object** and place it after *Create ToolImage* object.
+7. Drag another **Create Object** and place it after the **Create ToolImage** object.
 8. Double-click on the activity and set the following properties:
-  * **Entity** to **Tool**
+  * **Entity** to *Tool*
   * **Refresh in Client** to **Yes**
   * Add a new member and assign *NewToolImage* value.
    <p><img src="/Images/Tools_Page_AddTool_CreateMicroflow_CreateToolObject.png" alt="new app" border="2" /></p>
 
-10. Drag **Show Page** activity and place it after *Create Tool* object.
+10. Drag **Show page** activity from the **Toolbox** and place it after the **Create Tool** object.
 11. Double-click on the activity and from **Page Settings** window, do the following steps:
   * Click **Select** and from **Select Web Page**> **MyFirstModule** and click **New**.
-  * Select argument for a new page as *NewTool* object and click **OK**.
+  * Select an argument for a new page as *NewTool* object and click **OK**.
   * Create a new page with following properties:
-  *   Name: *Tool_NewEdit_Page*.
-  *   Navigation layout: **PopupLayout**, so this page appears as a popup over the Tools list page.
-  *   Template Category: **Forms**.
-  *   Page Template: **Form vertical**.
+  *  **Name**: *Tool_NewEdit_Page*.
+  *  **Navigation layout**: **PopupLayout**, so this page appears as a popup over the Tools list page.
+  *  Template Category: **Forms**.
+  *  Page Template: **Form vertical**.
      <p><img src="/Images/Tool_NewEdit_Page_Create.png" alt="new app" border="2" /></p> 
  Final page setting will look like as follows:
   <p><img src="/Images/Tool_NewEdit_Page_Create_PageSettings.png" alt="new app" border="2" /></p> 
 
   ## 6.2 Designing the Add Tool Page
-We have created *Tool_NewEdit_Page* based on the Tool argument passed from *CreateObjectsForToolAndImage_Microflow* microflow. The Name, Code, and Price fields are auto-populated on the page. We will now enhance the page to upload a image and render it. Do the following steps to achieve this:
-1. Drag the **Data View Container** from **Toolbox** and place it below the **Price**.
-2. Double-click the **Data View**, from **Edit Data View** > **Data Source** > **Select Entity**>  **Page parameters**> **Tool** > select **ToolImage**. 
+You have created *Tool_NewEdit_Page* based on the Tool argument passed from the *CreateObjectsForToolAndImage_Microflow* microflow. The Name, Code, and Price fields are auto-populated on the page. Modify the page for uploading an image and rendering. Do the following steps to achieve this:
+1. Drag the **Data View Container** from the **Toolbox** and place it below the **Price**.
+2. Double-click the **Data View**, from the **Edit Data View** > **Data Source** > **Select Entity**>  **Page parameters**> **Tool** > select **ToolImage**. 
 <p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
 
 3. Click **No** to automatically fill the contents of the data view.
-4. Drag the **Dynamic Image** from **Toolbox** and place it in the **Data View**.
-5. Double-click the **Dynamic Image** to open Edit window.
+4. Drag the **Dynamic Image** from the **Toolbox** and place it in the **Data View**.
+5. Double-click the **Dynamic Image** to open the **Edit** window.
  * Select Mendix image as a **Default image**.
  * Change Width to **100** **Pixels**, **Height** to **100** **Pixels.
  * Select **Data Source** > **Entity** > **MyFirstModule.ToolImage**.
  * Click **No** to automatically fill the contents of the dynamic image.
 6. Drag the **Container** from **Toolbox** and place it below the dynamic image.
 7. Drag the **Image Uploader** from **Toolbox** and place it inside the container.
-8. Drag the **Button** from **Toolbox** and place it inside the same container below the image uploader. Edit the **Button** properties as follows:
-  * Edit **Caption** to **Upload** and add a **Tooltip**.
-  * Select **Button Style** to **Success**.
+8. Drag the **Button** from **Toolbox** and place it inside the same container below the image uploader.
+9. Double-click the **Button** and edit properties as follows:
+  * **Caption** to *Upload*
+  * **Tooltip** to *Uplodad* an image
+  * **Button Style** to **Success**
     
 ### 6.2.1 Creating a Microflow to Upload Image
 
 1. Double-click **Upload image** and select **Call a microflow** from **Events On Click**
-2. From **Select Microflow** window, do the following steps:
-  * Select **MyFirstModule** and click **New**.
-  * Name microflow *UploadImage_Microflow* and click **OK**.
-3. From **App Explorer**, open **UploadImage_Microflow** microflow.
-4. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Start** event.
+2. From the **Select Microflow** window, do the following steps:
+  * Select **MyFirstModule** and click **New**
+  * Name the microflow *UploadImage_Microflow* and click **OK**
+3. From the **App Explorer**, open the **UploadImage_Microflow** microflow.
+4. Drag the **Commit Object** activity from the **Toolbox** and place it after the **Start** event.
 5. Double-click on the activity and set *Input Object or List** to **ToolImage**.
 6. Set **Refresh in Client** to **Yes**and click **OK**.
-7. Drag a **Change Object** activity from the **Toolbox** and place it after the **Commit Object** event.
+7. Drag the **Change Object** activity from the **Toolbox** and place it after the **Commit Object** event.
 8. Double-click on the activity and set *Input Object* to **Tool** and set **Refresh in Client** to **NO** .
 9. Add a new member and assign *ToolImage* value.
 <p><img src="/Images/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
 
 
 ### 6.2.2 Creating a Microflow to Save Tools
-Now we will add a custom logic to validate the input before saving tool object in database. Depending on the validation an appropriate message will be displayed. Do the following steps to achieve this:
+Now you will add a custom logic to validate the input before saving tool object in database. Depending on the validation an appropriate message will be displayed. Do the following steps to achieve this:
 
-1. Go to *Tool_NewEdit_Page* and double-click **Save**.
+1. Go to **Tool_NewEdit_Page** and double-click **Save**.
 2. Select **Call a microflow** from **Events On Click**.
-3. From **Select Microflow** window, do the following steps:
+3. From the **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
-  * Name microflow *SaveTool_Microflow* and click **OK**.
-4. From **App Explorer**, open **SaveTool_Microflow** microflow.
-5. Drag a **Decision** box from the **Toolbox** and place it after the **Start** event.
-6. Double-click on the decision box and set **Caption** to *Tool data is provided?* and **Expression** to * Double-click on the activity and set *Input Object or List** to **ToolImage**.
+  * Name the microflow *SaveTool_Microflow* and click **OK**.
+4. From the **App Explorer**, open the **SaveTool_Microflow** microflow.
+5. Drag the **Decision** box from the **Toolbox** and place it after the **Start** event.
 6. Double-click on the decision box, set **Caption** to *Tool data is provided?* and **Expression** to *$Tools/Name != empty and $Tool/Price !=0*.
-7. Draw a downward path for the **False** condition from the decision box and create an end event.
-8. Right-click on the same path and set **Condition Value** to **false**. This sets the other path's **condition Value** to **true**.
+7. Draw a downward path for the **False** condition from the decision box and create an **End event**.
+8. Right-click on the same path and set **Condition Value** to **false**. This sets automatically the other path's **condition Value** to **true**.
 9. Drag a **Show Message** from the **Toolbox** and place it over the false path.
-10. Double-click **Show Message**, select **Error** for **Type** and enter *Tools data is not provided.* in **Template**. 
-9. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Decision** box on true value path.
-10. Double-click on the activity and set *Input Object or List** to **Tool**.
-11. Set **Refresh in Client** to **Yes**and click **OK**.
-12. Drag a **Close page** activity from the **Toolbox** and place it after the **Commit Tool**.
-13. Drag a **Show Message** activity from the **Toolbox** and place it after the **Close page**.
-14. Double-click **Show Message**, enter *Tools data is saved successfully.* in **Template**.
+10. Double-click the **Show Message**, select **Error** for **Type** and enter *Tools data is not provided.* in **Template**. 
+11. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Decision** box on true value path.
+12. Double-click on the activity and set *Input Object or List** to **Tool**.
+13. Set **Refresh in Client** to **Yes**and click **OK**.
+14. Drag the **Close page** activity from the **Toolbox** and place it after the **Commit Tool**.
+15. Drag the **Show Message** activity from the **Toolbox** and place it after the **Close page**.
+16. Double-click the **Show Message**, enter *Tools data is saved successfully.* in **Template**.
     The final Microflow will look like as follows:
 <p><img src="/Images/SaveTool_Microflow_Compete.png" alt="new app" border="2" /></p>
 
 ## 6.3 Editing Tools Data
-Now we will enable the option to edit tools data from the tool list. Do the following steps:
+Now to enable the option to edit tools data from the tool list perform the following steps:
 1. From The *Tools_page*, double-click the button from the list view:
 <p><img src="/Images/Tools_Page_ListView_EditButton_Link_EditWindow.png" alt="new app" border="2" /></p>
 2.  Double-click the action button to edit its properties:
@@ -251,18 +253,21 @@ Now we will enable the option to edit tools data from the tool list. Do the foll
   * **Event On click**: select *Show Page* > *Tool_NewEdit_Page*
 
 ## 7 Linking Home_Page to Tools_Page
-Now we will add Card Action to the *Home_page* to navigate to the *Tools_page*.  
+Now you will add a Card Action to the *Home_page* to navigate to the *Tools_page*.  
 
-1. Drag a **Card Action** building block and drop onto the **Home** page.
+1. Drag the **Card Action** building block and drop onto the **Home** page.
 2. Double-click the **Card Title** and name this card **Tools**.
 3. Double-click the action button to edit its properties.
-4. From **Edit Action Button** window, select **Show Page** from Event On click  dropdown:
+4. From **Edit Action Button** window, select **Show Page** from **Event On click**  dropdown:
 <p><img src="/Images/Home_Page_ShowPage_Tools_Page.png" alt="new app" border="2" /></p> 
 
 ## 8 Run and Preview the Application
-Let's test the logic that you've just built:
-1. From **File**> click **Save All**.
+Test the logic that you've just built:
+1. From the **File**> click **Save All**.
 2. Click **Run Locally** and **View** app.
+
+## 9 Publish the Application
+You have successfully created your responsive web app for hardware store. To push your app to a cloud environment or web container connected to your app click the **Publish** button. 
 
  ## 7 Read More
 
