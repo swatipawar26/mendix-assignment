@@ -109,41 +109,41 @@ Let's design a page which displays tools available in the hardware store.
       <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Add_Parameter.png" alt="new app" border="2" /></p> 
    4. Select **Name**
        <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Add_Name.png" alt="new app" border="2" /></p> 
-   5. For the caption, replace **List item title** with parameter **{1}**.
+   5. For the caption, replace **List item title** with parameter *{1}*.
    
    Now change the **Secondary text** to the **Code** of the Tools. Do the following to achieve that:
    1. Double-click **Secondary text**.
-   2. From the **Edit Text** window, lick on Edit Caption.
+   2. From the **Edit Text** window, click **Edit** next to **Caption**.
     <p><img src="/Images/Tools_Page_List_View_List_Item_Secondary_Text_Edit.png" alt="new app" border="2" /></p>   
    3. Add a **New** parameter.
       <p><img src="/Images/Tools_Page_List_View_List_Item_Secondart_Text_Add_Parameter.png" alt="new app" border="2" /></p> 
    4. Select **Code**
        <p><img src="/Images/Tools_Page_List_View_List_Item_Secondart_text_Code.png" alt="new app" border="2" /></p> 
-   5. For the caption, replace **Secondary text** with parameter **HW-{1}**.
+   5. For the caption, replace **Secondary text** with parameter *HW-{1}*.
 
-   Similarly, copy the code field for price attribute. Define the parameter to **Price** and caption to **${1}**.
+ Similarly, copy the HW-{Code} Text element for the price attribute. Define the parameter to **Price** and caption to *${1}*.
 
-Now, we will replace a static image to a dynamic image in the list view. Perform the following steps to achieve this.                                                                          
-1. Delete the **Static Image** and Drag **Dynamice Image** by selecting **Dynamic Image** from left side Toolbox.
-2. Double-click the **Dynamic Image** to open Edit window.
-3. * Select Mendix image as a **Default image**.
-   * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**                                                           
+Now, replace a static image to a dynamic image in the list view. Perform the following steps to achieve this:                                                                         
+1. Delete the **Static Image** and drag **Dynamice Image** from the **Toolbox** on left side.
+2. Double-click the **Dynamic Image** and perform the following steps in the **Edit Dynamic Image** window:
+ * Select Mendix image as a **Default image**.
+ * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**                                                           
 <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
-To define the entity which we want to connect to the Dynamic Image, Select **ToolImage** entity, click **OK**.  :
+To define the entity which we want to connect to the Dynamic Image, select **ToolImage** entity, click **OK**.  :
    <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Data_Source_.png" alt="new app" border="2" /></p>
 
   4. Click **No** to automatically fill the contents of the dynamic image.
 
      
 ## 6 Creating App's User Interface to Manage Tools
-Now we have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do that with the following steps:
+Now you have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do the following steps:
 
 1. Select and delete the two action buttons from top right side of the **Tools_Page**.
-2. Drag a **Button** from **Toolbox** and place it above the list. Edit the **Button** properties as follows:
-  * Edit **Caption** to **Add** and add a **Tooltip**.
+2. Drag the **Button** from the **Toolbox** and place it above the list. Double-click the **Button** to edit properties as follows:
+  * Edit **Caption** to *Add* and add a **Tooltip**.
   * Select the button **Icon**
-  * Select **Button Style** to **Primary**.
+  * Select the **Button Style** to *Primary**.
 <p><img src="/Images/Tools_Page_AddTool_Button_Properties.png" alt="new app" border="2" /></p>
 
 ## 6.1 Creating a Microflow to Display Add Tool Page
