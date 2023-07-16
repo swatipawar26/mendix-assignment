@@ -11,7 +11,6 @@ This document covers how to do the following:
 * Create a domain model to store tools information with image in database and render it on various pages
 * Develop microflows to build a custom logic
 * Add validation and confirmation messages 
- At a glance, you will know the tools available in the store and manage its details.
 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have completed the following prerequisites:
