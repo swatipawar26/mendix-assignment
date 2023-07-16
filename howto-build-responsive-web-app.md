@@ -35,7 +35,7 @@ To create a new web app from template, follow these steps:
 <p><img src="/Images/HomePage.png" alt="new app" border="2" /></p>
 
 ## 4 Creating Domain Model
-Now we will define the following entities in the Domain Model.
+Now you will define the following entities in the Domain Model.
   * Tool- It holds tool information as follows:
     
     | **Attribute Name** | **Description** |
@@ -44,7 +44,7 @@ Now we will define the following entities in the Domain Model.
     |Name| Tool Name|
     |Price| Tool Price|
     
-  * ToolImage: It inherits from the system entity Image and does not require own attributes. It holds tool image information.
+  * ToolImage- It inherits from the system entity Image and does not require own attributes. It holds tool image information.
 
 ### 4.1 Creating an Entity for Tools
 
@@ -95,13 +95,13 @@ Let's design a page which displays tools available in the hardware store.
 
 ### 5.3 Connecting Tool Page to Tool Data
   1. To connect the data to the page, double click the **List View**.
-  2. To define the entity which we want to connect to the List View, go to the **Data source** tab and click **Select**  :
+  2. To define the entity which you want to connect to the List View, go to the **Data source** tab and click **Select**  :
    <p><img src="/Images/Tools_Page_List_View_Data_Source_select.png" alt="new app" border="2" /></p>
    
   3. Select **Tool** entity and click **OK**.
   4. Click **No** to automatically fill the contents of the list view.
   
-   Lets start by changing the **List item title** to the *Name* of the Tools. As we want this information to be displayed from the Tool entity. Do the following to achieve that:
+   Lets start by changing the **List item title** to the *Name* of the Tools. As you want this information to be displayed from the Tool entity. Do the following to achieve that:
    1. Double-click **List item title**.
    2. From the **Edit Text** window, click **Edit** next to **Caption**.
     <p><img src="/Images/Tools_Page_List_View_List_Item_Title_Edit.png" alt="new app" border="2" /></p>   
@@ -130,7 +130,7 @@ Now, replace a static image to a dynamic image in the list view. Perform the fol
  * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**                                                           
 <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
 
-To define the entity which we want to connect to the Dynamic Image, select **ToolImage** entity, click **OK**.  :
+To define the entity which you want to connect to the Dynamic Image, select **ToolImage** entity, click **OK**.  :
    <p><img src="/Images/Tools_Page_List_View_List_Item_ToolImage_Data_Source_.png" alt="new app" border="2" /></p>
 
   4. Click **No** to automatically fill the contents of the dynamic image.
