@@ -269,10 +269,4 @@ Test the logic that you've just built:
 ## 9 Publish the Application
 You have successfully created your responsive web app for hardware store. To push your app to a cloud environment or web container connected to your app click the **Publish** button. 
 
- ## 7 Read More
-
-* {Link 1}
-* {Link2} – {an explanation when necessary especially if this is a third-party link}
-
-{Make sure this section contains a bulleted list only with explanations where necessary. Do not just repeat cross-references you used throughout the document, but list useful supplementary links here.}
 
