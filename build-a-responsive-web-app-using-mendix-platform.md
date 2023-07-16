@@ -128,10 +128,10 @@ Now, replace a static image to a dynamic image in the list view. Perform the fol
 2. Double-click the **Dynamic Image** and perform the following steps in the **Edit Dynamic Image** window:
  * Select Mendix image as a **Default image**.
  * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**                                                           
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_ToolImage_Edit_2.png" alt="new app" border="2" /></p> 
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-tool-image-edit.png" alt="tools-page-list-view-list-tool-image-edit" border="2" /></p> 
 
 To define the entity which you want to connect to the Dynamic Image, select **ToolImage** entity, click **OK**.  :
-   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_ToolImage_Data_Source_.png" alt="new app" border="2" /></p>
+   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-tool-image-data-source-.png" alt="tools-page-list-view-list-tool-image-data-source" border="2" /></p>
 
   4. Click **No** to automatically fill the contents of the dynamic image.
 
