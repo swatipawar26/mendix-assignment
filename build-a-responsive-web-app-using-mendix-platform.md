@@ -54,27 +54,27 @@ Now you will define the following entities in the Domain Model.
   * Name the entity *Tool*
   * Under the **Attributes** tab click **New** and add attributes:
     
- <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tool_Entity.png" alt="new app" border="2" /></p>
+ <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-entity.png" alt="tool-entity" border="2" /></p>
  
 4. Click **OK** to close the entity’s properties window.
    
 ### 4.2 Creating an Entity for Images
 
   1.  Drag a new **Entity** from the right side **Toolbox** and drop it into the domain model canvas.
- <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/ToolImage_EntityBefore.png" alt="new app" border="2" /></p>
+ <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/creating-entity-for-images.png" alt="creating-entity-for-images" border="2" /></p>
   
   2.  Name the entity *ToolImage*, then click **Select** next to **Generalization**.
   3.  From the **Select Entity** window, expand **System** and select **Image** : 
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/ToolImage_SystemImageEntity.png" alt="new app" border="2" /></p>
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-select-system-image-entity.png" alt="tool-image-select-system-image-entity" border="2" /></p>
 
 4. Click **OK** to close the entity’s properties window.
    
 ### 4.3 Creating an association 
 
 1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line.
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/ToolImage_Tool_Associatiom.png" alt="new app" border="2" /></p>
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association.png" alt="tool-image-tool-associatiom" border="2" /></p>
 2. Double-click the assocition link and select **[1-1]** association:
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/ToolImage_Tool_Associatiom_Properties.png" alt="new app" border="2" /></p>
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association-properties.png" alt="tool-image-tool-association-properties" border="2" /></p>
 3. Click **OK** to close the association’s properties window.
         
 ## 5 Creating App's User Interface to Display Tools
@@ -84,7 +84,7 @@ Let's design a page which displays tools available in the hardware store.
   1. From the **App Explorer** pane, right-click **MyFirstModule** and select **Add Page**.
   2. From **Create Page**, *Name* ths page **Tools_Page** and select **List** > **List Columns** and click **OK**.
      
-     <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/AddPage_DisplayTools.png" alt="new app" border="2" /></p>
+     <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/add-page-display-tools.png" alt="add-page-display-tools" border="2" /></p>
      
 ### 5.2 Editing Page Header and Linking Back Button to Home Page
  1. Doube-click **Page header title**, change it to *Tools in Store* and click **OK** to close the window.
