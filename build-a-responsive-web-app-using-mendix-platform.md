@@ -91,12 +91,12 @@ Let's design a page which displays tools available in the hardware store.
  2. Double-click the **Back** button, and do the following from **Edit Action Button** window:
      * From **Events On click** select **Show a page**
      * From **Show web page** select **Home_Web**
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Change_Back_Button.png" alt="new app" border="2" /></p>
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/link-back-button-to-home-page.png" alt="link-back-button-to-home-page" border="2" /></p>
 
 ### 5.3 Connecting Tool Page to Tool Data
   1. To connect the data to the page, double click the **List View**.
   2. To define the entity which you want to connect to the List View, go to the **Data source** tab and click **Select**  :
-   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_Data_Source_select.png" alt="new app" border="2" /></p>
+   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page_-list-view-data-source-select.png" alt="tools-page_-list-view-data-source-select" border="2" /></p>
    
   3. Select **Tool** entity and click **OK**.
   4. Click **No** to automatically fill the contents of the list view.
@@ -104,21 +104,21 @@ Let's design a page which displays tools available in the hardware store.
    Lets start by changing the **List item title** to the *Name* of the Tools. As you want this information to be displayed from the Tool entity. Do the following to achieve that:
    1. Double-click **List item title**.
    2. From the **Edit Text** window, click **Edit** next to **Caption**.
-    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Title_Edit.png" alt="new app" border="2" /></p>   
+    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-title-edit.png" alt="tools-page-list-view-list-item-title-edit" border="2" /></p>   
    3.From **Edit Caption** window, add a **New** parameter.
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Title_Add_Parameter.png" alt="new app" border="2" /></p> 
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-title-add-parameter.png" alt="tools-page-list-view-list-item-title-add-parameter" border="2" /></p> 
    4. Select **Name**
-       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Title_Add_Name.png" alt="new app" border="2" /></p> 
+       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-title-select-name.png" alt="tools-page-list-view-list-item-title-select-name" border="2" /></p> 
    5. For the caption, replace **List item title** with parameter *{1}*.
    
    Now change the **Secondary text** to the **Code** of the Tools. Do the following to achieve that:
    1. Double-click **Secondary text**.
    2. From the **Edit Text** window, click **Edit** next to **Caption**.
-    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Secondary_Text_Edit.png" alt="new app" border="2" /></p>   
+    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-secondary-text-edit.png" alt="tools-page-list-view-list-item-secondary-text-edit" border="2" /></p>   
    3. Add a **New** parameter.
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Secondart_Text_Add_Parameter.png" alt="new app" border="2" /></p> 
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-secondary-text-add-parametert.png" alt="tools-page-list-view-list-item-secondary-text-add-parametert" border="2" /></p> 
    4. Select **Code**
-       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_List_View_List_Item_Secondart_text_Code.png" alt="new app" border="2" /></p> 
+       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-secondary-text-code.png" alt="tools-page-list-view-list-item-secondary-text-code" border="2" /></p> 
    5. For the caption, replace **Secondary text** with parameter *HW-{1}*.
 
  Similarly, copy the HW-{Code} Text element for the price attribute. Define the parameter to **Price** and caption to *${1}*.
