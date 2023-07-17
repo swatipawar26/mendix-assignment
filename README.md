@@ -1,2 +1,2 @@
-# Mendix_Assignment
-Mendix Assignment
+# Assignment on Build a Responsive Web App Using Mendix Platform
+
