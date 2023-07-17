@@ -144,11 +144,13 @@ Now you have a page that shows the list of tools, but there is no functionality 
 2. Drag the **Button** from the **Toolbox** and place it above the list. Double-click the **Button** to edit properties as follows:
   * Edit **Caption** to *Add* and add a **Tooltip**.
   * Select the button **Icon**
-  * Select the **Button Style** to *Primary*:
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-button-change-properties.png" alt="tools-page-add-tool-button-change-properties" border="2" /></p>
+  * Select the **Button Style** to *Primary*
 
 ## 6.1 Creating a Microflow to Display Add Tool Page
-1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
+1. Double-click **Add** and select **Call a microflow** from **Events On Click**:
+   
+   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-button-change-properties.png" alt="tools-page-add-tool-button-change-properties" border="2" /></p>
+   
 2. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
   * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**:
@@ -170,8 +172,8 @@ Now you have a page that shows the list of tools, but there is no functionality 
   * Add a new member and assign *NewToolImage* value:
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-create-tool-bject-object.png" alt="tools-page-add-tool-create-microflow-create-tool-bject-object" border="2" /></p>
 
-10. Drag **Show page** activity from the **Toolbox** and place it after the **Create Tool** object.
-11. Double-click on the activity and from **Page Settings** window, do the following steps:
+9. Drag **Show page** activity from the **Toolbox** and place it after the **Create Tool** object.
+10. Double-click on the activity and from **Page Settings** window, do the following steps:
   * Click **Select** and from **Select Web Page**> **MyFirstModule** and click **New**.
   * Select an argument for a new page as *NewTool* object and click **OK**.
   * Create a new page with following properties:
