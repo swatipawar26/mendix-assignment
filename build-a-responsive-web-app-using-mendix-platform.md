@@ -186,7 +186,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
 You have created *Tool_NewEdit_Page* based on the Tool argument passed from the *CreateObjectsForToolAndImage_Microflow* microflow. The Name, Code, and Price fields are auto-populated on the page. Modify the page for uploading an image and rendering. Do the following steps to achieve this:
 1. Drag the **Data View Container** from the **Toolbox** and place it below the **Price**.
 2. Double-click the **Data View**, from the **Edit Data View** > **Data Source** > **Select Entity**>  **Page parameters**> **Tool** > select **ToolImage**. 
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-data-view-data-source-select-entity.png" alt="tool-new-edit-page-data-view-data-source-select-entity" border="2" /></p>
 
 3. Click **No** to automatically fill the contents of the data view.
 4. Drag the **Dynamic Image** from the **Toolbox** and place it in the **Data View**.
@@ -216,7 +216,7 @@ You have created *Tool_NewEdit_Page* based on the Tool argument passed from the 
 7. Drag the **Change Object** activity from the **Toolbox** and place it after the **Commit Object** event.
 8. Double-click on the activity and set *Input Object* to **Tool** and set **Refresh in Client** to **NO** .
 9. Add a new member and assign *ToolImage* value.
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tool_NewEdit_Page_DataView_DataSource_SelectEntity.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-upload-microflow-change-object-member-assign.png" alt="tool-new-edit-page-upload-microflow-change-object-member-assign" border="2" /></p>
 
 
 ### 6.2.2 Creating a Microflow to Save Tools
@@ -241,12 +241,12 @@ Now you will add a custom logic to validate the input before saving tool object 
 15. Drag the **Show Message** activity from the **Toolbox** and place it after the **Close page**.
 16. Double-click the **Show Message**, enter *Tools data is saved successfully.* in **Template**.
     The final Microflow will look like as follows:
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/SaveTool_Microflow_Compete.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/save-tool-full-microflow-competed.png" alt="save-tool-full-microflow-competed" border="2" /></p>
 
 ## 6.3 Editing Tools Data
 Now to enable the option to edit tools data from the tool list perform the following steps:
 1. From The *Tools_page*, double-click the button from the list view:
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_ListView_EditButton_Link_EditWindow.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-edit-button-link-edit-window.png" alt="tools-page-list-view-edit-button-link-edit-window" border="2" /></p>
 2.  Double-click the action button to edit its properties:
 
   * **Tooltip**: *Edit Tool*
@@ -259,7 +259,7 @@ Now you will add a Card Action to the *Home_page* to navigate to the *Tools_page
 2. Double-click the **Card Title** and name this card **Tools**.
 3. Double-click the action button to edit its properties.
 4. From **Edit Action Button** window, select **Show Page** from **Event On click**  dropdown:
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Home_Page_ShowPage_Tools_Page.png" alt="new app" border="2" /></p> 
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/home-page-to-show-page-tools-page.png" alt="new app" border="2" /></p> 
 
 ## 8 Run and Preview the Application
 Test the logic that you've just built:
