@@ -153,9 +153,9 @@ Now you have a page that shows the list of tools, but there is no functionality 
   * Select **MyFirstModule** and click **New**.
   * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
     
- <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow.png" alt="tools-page-add-tool-create-microflow" border="2" /></p>
-  
-  * Click **OK** to close **Edit Action Button** window.
+ <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-window.png" alt="tools-page-add-tool-create-microflow-window" border="2" /></p>
+
+   * Click **OK** to close **Edit Action Button** window.
     
 3. From the **App Explorer**, open **CreateObjectsForToolAndImage_Microflow** microflow.
 4. Drag the **Create Object** activity from the **Toolbox** and place it after the **Start** event.
