@@ -151,7 +151,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
 1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
 2. From **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
-  * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
+  * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**:
     
  <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-window.png" alt="tools-page-add-tool-create-microflow-window" border="2" /></p>
 
@@ -178,7 +178,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
   *  **Name**: *Tool_NewEdit_Page*.
   *  **Navigation layout**: **PopupLayout**, so this page appears as a popup over the Tools list page.
   *  Template Category: **Forms**.
-  *  Page Template: **Form vertical**.
+  *  Page Template: **Form vertical**:
      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page.png" alt="tool-new-edit-page-create-page" border="2" /></p> 
  Final page setting will look like as follows:
   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page-setting.png" alt="tool-new-edit-page-create-page-setting" border="2" /></p> 
