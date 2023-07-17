@@ -143,7 +143,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
 2. Drag the **Button** from the **Toolbox** and place it above the list. Double-click the **Button** to edit properties as follows:
   * Edit **Caption** to *Add* and add a **Tooltip**.
   * Select the button **Icon**
-  * Select the **Button Style** to *Primary**.
+  * Select the **Button Style** to *Primary*.
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-button-change-properties.png" alt="tools-page-add-tool-button-change-properties" border="2" /></p>
 
 ## 6.1 Creating a Microflow to Display Add Tool Page
