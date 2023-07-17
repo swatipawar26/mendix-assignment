@@ -3,6 +3,7 @@
 ## 1 Introduction
 This how-to will teach you to build a hardware store app using several key concepts of Mendix like UI widgets, domain model, and microflows.
 At a glance, you will know the tools available in the store and manage its details.
+
 This document covers how to do the following:
 * Create a new web app for a hardware store  
 * Build web pages to see the list of tools available in store
