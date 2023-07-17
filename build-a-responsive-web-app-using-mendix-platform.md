@@ -31,7 +31,7 @@ To create a new web app from template, follow these steps:
 3. Name the app **Hardware Store App** and click the **Create app** button:
  <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/app-settings.png" alt="app-settings" border="2" /></p>
  
-4. The app gets initialized and the app will open on your home page called **Home_Web**
+4. The app gets initialized and the app will open on your home page called **Home_Web**:
    
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/home-page.png" alt="home-page" border="2" /></p>
 
@@ -61,7 +61,7 @@ Now you will define the following entities in the Domain Model.
    
 ### 4.2 Creating an Entity for Images
 
-  1.  Drag a new **Entity** from the right side **Toolbox** and drop it into the domain model canvas.
+  1.  Drag a new **Entity** from the right side **Toolbox** and drop it into the domain model canvas:
  <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/creating-entity-for-images.png" alt="creating-entity-for-images" border="2" /></p>
   
   2.  Name the entity *ToolImage*, then click **Select** next to **Generalization**.
@@ -72,7 +72,7 @@ Now you will define the following entities in the Domain Model.
    
 ### 4.3 Creating an association 
 
-1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line.
+1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association.png" alt="tool-image-tool-associatiom" border="2" /></p>
 2. Double-click the assocition link and select **[1-1]** association:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association-properties.png" alt="tool-image-tool-association-properties" border="2" /></p>
