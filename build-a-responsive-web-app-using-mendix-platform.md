@@ -6,7 +6,7 @@ At a glance, you will know the tools available in the store and manage its detai
 
 This document covers how to do the following:
 * Create a new web app for a hardware store  
-* Build web pages to see the list of tools available in store
+* Build a web page to see the list of tools available in store
 * Add tools with images, edit the tool details
 * Navigate from one page to another 
 * Create a domain model to store tools information with image in database and render it on various pages
