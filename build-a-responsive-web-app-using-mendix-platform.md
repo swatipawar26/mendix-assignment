@@ -45,7 +45,7 @@ Now you will define the following entities in the Domain Model.
     |Name| Tool Name|
     |Price| Tool Price|
     
-  * ToolImage- It inherits from the system entity Image and does not require own attributes. It holds tool image information.
+  * ToolImage- It inherits from the system entity Image and does not require its own attributes. It holds tool image information.
 
 ### 4.1 Creating an Entity for Tools
 
@@ -100,7 +100,7 @@ Let's design a page that displays tools available in the hardware store.
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page_-list-view-data-source-select.png" alt="tools-page_-list-view-data-source-select" border="2" /></p>
    
   3. Select **Tool** entity and click **OK**.
-  4. Click **No** to automatically fill the contents of the list view.
+  4. Click **No** to fill in the contents of the list view automatically. 
   
    Let's start by changing the **List item title** to the *Name* of the Tools. As you want this information to be displayed from the Tool entity. Do the following to achieve that:
    1. Double-click **List item title**.
@@ -134,13 +134,13 @@ Now, replace a static image with a dynamic image in the list view. Perform the f
 To define the entity which you want to connect to the Dynamic Image, select the **ToolImage** entity, and click **OK**:
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-tool-image-data-source-.png" alt="tools-page-list-view-list-tool-image-data-source" border="2" /></p>
 
-  4. Click **No** to automatically fill the contents of the dynamic image.
+  4. Click **No** to fill in the contents of the dynamic image automatically.
 
      
 ## 6 Creating Your App's User Interface to Manage Tools
 Now you have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do the following steps:
 
-1. Select and delete the two action buttons from top right side of the **Tools_Page**.
+1. Select and delete the two action buttons from the top right side of the **Tools_Page**.
 2. Drag the **Button** from the **Toolbox** and place it above the list. Double-click the **Button** to edit properties as follows:
   * Edit **Caption** to *Add* and add a **Tooltip**.
   * Select the button **Icon**
@@ -182,7 +182,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
   *  Template Category: **Forms**.
   *  Page Template: **Form vertical**:
      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page.png" alt="tool-new-edit-page-create-page" border="2" /></p> 
- The final page setting will look like as follows:
+ The final page setting will look as follows:
   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page-setting.png" alt="tool-new-edit-page-create-page-setting" border="2" /></p> 
 
   ## 6.2 Designing the Add Tool Page
@@ -191,19 +191,19 @@ You have created *Tool_NewEdit_Page* based on the Tool argument passed from the 
 2. Double-click the **Data View**, from the **Edit Data View** > **Data Source** > **Select Entity**>  **Page parameters**> **Tool** > select **ToolImage**:
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-data-view-data-source-select-entity.png" alt="tool-new-edit-page-data-view-data-source-select-entity" border="2" /></p>
 
-3. Click **No** to automatically fill the contents of the data view.
+3. Click **No** to fill in the contents of the data view automatically.
 4. Drag the **Dynamic Image** from the **Toolbox** and place it in the **Data View**.
 5. Double-click the **Dynamic Image** to open the **Edit** window.
  * Select Mendix image as a **Default image**.
  * Change Width to **100** **Pixels**, **Height** to **100** **Pixels.
  * Select **Data Source** > **Entity** > **MyFirstModule.ToolImage**.
- * Click **No** to automatically fill the contents of the dynamic image.
+ * Click **No** to fill in the contents of the dynamic image automatically.
 6. Drag the **Container** from **Toolbox** and place it below the dynamic image.
 7. Drag the **Image Uploader** from **Toolbox** and place it inside the container.
 8. Drag the **Button** from **Toolbox** and place it inside the same container below the image uploader.
 9. Double-click the **Button** and edit properties as follows:
   * **Caption** to *Upload*
-  * **Tooltip** to *Uplodad* an image
+  * **Tooltip** to *Upload* an image
   * **Button Style** to **Success**
     
 ### 6.2.1 Creating a Microflow to Upload Image
@@ -234,7 +234,7 @@ Now you will add custom logic to validate the input before saving the tool objec
 5. Drag the **Decision** box from the **Toolbox** and place it after the **Start** event.
 6. Double-click on the decision box, set **Caption** to *Tool data is provided?* and **Expression** to *$Tools/Name != empty and $Tool/Price !=0*.
 7. Draw a downward path for the **False** condition from the decision box and create an **End event**.
-8. Right-click on the same path and set **Condition Value** to **false**. This sets automatically the other path's **condition Value** to **true**.
+8. Right-click on the same path and set **Condition Value** to **false**. This sets automatically the other path's **Condition Value** to **true**.
 9. Drag a **Show Message** from the **Toolbox** and place it over the false path.
 10. Double-click the **Show Message**, select **Error** for **Type** and enter *Tools data is not provided.* in **Template**. 
 11. Drag a **Commit Object** activity from the **Toolbox** and place it after the **Decision** box on true value path.
@@ -243,7 +243,7 @@ Now you will add custom logic to validate the input before saving the tool objec
 14. Drag the **Close page** activity from the **Toolbox** and place it after the **Commit Tool**.
 15. Drag the **Show Message** activity from the **Toolbox** and place it after the **Close page**.
 16. Double-click the **Show Message**, enter *Tools data is saved successfully.* in **Template**.
-    The final Microflow will look like as follows:
+    The final Microflow will look as follows:
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/save-tool-full-microflow-competed.png" alt="save-tool-full-microflow-competed" border="2" /></p>
 
 ## 6.3 Editing Tools Data
@@ -270,6 +270,6 @@ Test the logic that you've just built:
 2. Click **Run Locally** and **View** app.
 
 ## 9 Publish the Application
-You have successfully created your responsive web app for hardware store. To push your app to a cloud environment or web container connected to your app click the **Publish** button. 
+You have successfully created your responsive web app for the hardware store. To push your app to a cloud environment or web container connected to your app click the **Publish** button. 
 
 
