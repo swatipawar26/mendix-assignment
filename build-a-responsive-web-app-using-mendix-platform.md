@@ -144,7 +144,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
   * Edit **Caption** to *Add* and add a **Tooltip**.
   * Select the button **Icon**
   * Select the **Button Style** to *Primary**.
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_AddTool_Button_Properties.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-button-change-properties.png" alt="tools-page-add-tool-button-change-properties" border="2" /></p>
 
 ## 6.1 Creating a Microflow to Display Add Tool Page
 1. Double-click **Add** and select **Call a microflow** from **Events On Click**.
@@ -152,13 +152,13 @@ Now you have a page that shows the list of tools, but there is no functionality 
   * Select **MyFirstModule** and click **New**.
   * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**.
     
- <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_AddTool_CreateMicroflow.png" alt="new app" border="2" /></p>
+ <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow.png" alt="tools-page-add-tool-create-microflow" border="2" /></p>
   
   * Click **OK** to close **Edit Action Button** window.
     
 3. From the **App Explorer**, open **CreateObjectsForToolAndImage_Microflow** microflow.
 4. Drag the **Create Object** activity from the **Toolbox** and place it after the **Start** event.
-<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_AddTool_CreateMicroflow_CreateImageObject.png" alt="new app" border="2" /></p>
+<p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-create-image-object.png" alt="tools-page-add-tool-create-microflow-create-image-object" border="2" /></p>
 
 5. Double-click on the activity and set **Entity** to *ToolImage*.
 6. Set **Refresh in Client** to **Yes**and click **OK**.
@@ -167,7 +167,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
   * **Entity** to *Tool*
   * **Refresh in Client** to **Yes**
   * Add a new member and assign *NewToolImage* value.
-   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tools_Page_AddTool_CreateMicroflow_CreateToolObject.png" alt="new app" border="2" /></p>
+   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-create-tool-bject-object.png" alt="tools-page-add-tool-create-microflow-create-tool-bject-object" border="2" /></p>
 
 10. Drag **Show page** activity from the **Toolbox** and place it after the **Create Tool** object.
 11. Double-click on the activity and from **Page Settings** window, do the following steps:
@@ -178,9 +178,9 @@ Now you have a page that shows the list of tools, but there is no functionality 
   *  **Navigation layout**: **PopupLayout**, so this page appears as a popup over the Tools list page.
   *  Template Category: **Forms**.
   *  Page Template: **Form vertical**.
-     <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tool_NewEdit_Page_Create.png" alt="new app" border="2" /></p> 
+     <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page.png" alt="tool-new-edit-page-create-page" border="2" /></p> 
  Final page setting will look like as follows:
-  <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/Tool_NewEdit_Page_Create_PageSettings.png" alt="new app" border="2" /></p> 
+  <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page-setting.png" alt="tool-new-edit-page-create-page-setting" border="2" /></p> 
 
   ## 6.2 Designing the Add Tool Page
 You have created *Tool_NewEdit_Page* based on the Tool argument passed from the *CreateObjectsForToolAndImage_Microflow* microflow. The Name, Code, and Price fields are auto-populated on the page. Modify the page for uploading an image and rendering. Do the following steps to achieve this:
