@@ -1,7 +1,7 @@
 # Build a Responsive Web App Using Mendix Platform
 
 ## 1 Introduction
-This how-to will teach you to build a hardware store app using several key concepts of Mendix like UI widgets, domain model, and microflows.
+This how-to will teach you to build a hardware store app using several key concepts of Mendix like UI widgets, domain entities, and microflows.
 At a glance, you will know the tools available in the store and manage its details.
 
 This document covers how to do the following:
@@ -9,7 +9,7 @@ This document covers how to do the following:
 * Build a web page to see the list of tools available in store
 * Add tools with images, edit the tool details
 * Navigate from one page to another 
-* Create a domain model to store tools information with image in database and render it on various pages
+* Create a domain model to store tools information with an image in the database and render it on various pages
 * Develop microflows to build a custom logic
 * Add validation and confirmation messages 
 
@@ -17,10 +17,10 @@ This document covers how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download and install Mendix Studio Pro 10.0.0
-* Have basic knowledge of Mendix Studio pro IDE, Mendix widgets, tools, and building blocks
+* Have basic knowledge of Mendix Studio Pro IDE, Mendix widgets, tools, and building blocks
 
 ## 3 Creating a New Web App Using Template
-To create a new web app from template, follow these steps:
+To create a new web app from a template, follow these steps:
 
 1. Starting from Mendix Studio Pro, click **Create New App**:
    
@@ -35,7 +35,7 @@ To create a new web app from template, follow these steps:
    
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/home-page.png" alt="home-page" border="2" /></p>
 
-## 4 Creating Domain Model
+## 4 Creating Your App's Domain Model
 Now you will define the following entities in the Domain Model.
   * Tool- It holds tool information as follows:
     
@@ -73,17 +73,17 @@ Now you will define the following entities in the Domain Model.
 ### 4.3 Creating an association 
 
 1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line:
-      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association.png" alt="tool-image-tool-associatiom" border="2" /></p>
-2. Double-click the assocition link and select **[1-1]** multiplicity for the association:
+      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association.png" alt="tool-image-tool-association" border="2" /></p>
+2. Double-click the association link and select **[1-1]** multiplicity for the association:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association-properties.png" alt="tool-image-tool-association-properties" border="2" /></p>
 3. Click **OK** to close the association’s properties window.
         
-## 5 Creating App's User Interface to Display Tools
-Let's design a page which displays tools available in the hardware store.
+## 5 Creating Your App's User Interface to Display Tools
+Let's design a page that displays tools available in the hardware store.
 
 ### 5.1 Creating a Tools_Page
   1. From the **App Explorer** pane, right-click **MyFirstModule** and select **Add Page**.
-  2. From **Create Page**, *Name* ths page **Tools_Page** and select **List** > **List Columns** and click **OK**:
+  2. From **Create Page**, *Name* this page **Tools_Page** and select **List** > **List Columns** and click **OK**:
      
      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/add-page-display-tools.png" alt="add-page-display-tools" border="2" /></p>
      
@@ -94,15 +94,15 @@ Let's design a page which displays tools available in the hardware store.
      * From **Show web page** select **Home_Web**:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/link-back-button-to-home-page.png" alt="link-back-button-to-home-page" border="2" /></p>
 
-### 5.3 Connecting Tool Page to Tool Data
-  1. To connect the data to the page, double click the **List View**.
+### 5.3 Connecting a Tool Page to the Tool Data
+  1. To connect the data to the page, double-click the **List View**.
   2. To define the entity which you want to connect to the List View, go to the **Data source** tab and click **Select**:
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page_-list-view-data-source-select.png" alt="tools-page_-list-view-data-source-select" border="2" /></p>
    
   3. Select **Tool** entity and click **OK**.
   4. Click **No** to automatically fill the contents of the list view.
   
-   Lets start by changing the **List item title** to the *Name* of the Tools. As you want this information to be displayed from the Tool entity. Do the following to achieve that:
+   Let's start by changing the **List item title** to the *Name* of the Tools. As you want this information to be displayed from the Tool entity. Do the following to achieve that:
    1. Double-click **List item title**.
    2. From the **Edit Text** window, click **Edit** next to **Caption**:
     <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-item-title-edit.png" alt="tools-page-list-view-list-item-title-edit" border="2" /></p>   
@@ -124,20 +124,20 @@ Let's design a page which displays tools available in the hardware store.
 
  Similarly, copy the HW-{Code} Text element for the price attribute. Define the parameter to **Price** and caption to *${1}*.
 
-Now, replace a static image to a dynamic image in the list view. Perform the following steps to achieve this:                                                                         
+Now, replace a static image with a dynamic image in the list view. Perform the following steps to achieve this:                                                                         
 1. Delete the **Static Image** and drag **Dynamice Image** from the **Toolbox** on left side.
 2. Double-click the **Dynamic Image** and perform the following steps in the **Edit Dynamic Image** window:
  * Select Mendix image as a **Default image**.
  * Change Width to **100** **Pixels**, **Height** to **100** **Pixels**:                                                          
 <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-tool-image-edit.png" alt="tools-page-list-view-list-tool-image-edit" border="2" /></p> 
 
-To define the entity which you want to connect to the Dynamic Image, select **ToolImage** entity, click **OK**:
+To define the entity which you want to connect to the Dynamic Image, select the **ToolImage** entity, and click **OK**:
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-list-view-list-tool-image-data-source-.png" alt="tools-page-list-view-list-tool-image-data-source" border="2" /></p>
 
   4. Click **No** to automatically fill the contents of the dynamic image.
 
      
-## 6 Creating App's User Interface to Manage Tools
+## 6 Creating Your App's User Interface to Manage Tools
 Now you have a page that shows the list of tools, but there is no functionality yet to add a new tool. Let's do the following steps:
 
 1. Select and delete the two action buttons from top right side of the **Tools_Page**.
@@ -151,7 +151,7 @@ Now you have a page that shows the list of tools, but there is no functionality 
    
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-button-change-properties.png" alt="tools-page-add-tool-button-change-properties" border="2" /></p>
    
-2. From **Select Microflow** window, do the following steps:
+2. From the **Select Microflow** window, do the following steps:
   * Select **MyFirstModule** and click **New**.
   * Name the microflow *CreateObjectsForToolAndImage_Microflow* and click **OK**:
     
@@ -173,16 +173,16 @@ Now you have a page that shows the list of tools, but there is no functionality 
    <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tools-page-add-tool-create-microflow-create-tool-bject-object.png" alt="tools-page-add-tool-create-microflow-create-tool-bject-object" border="2" /></p>
 
 9. Drag **Show page** activity from the **Toolbox** and place it after the **Create Tool** object.
-10. Double-click on the activity and from **Page Settings** window, do the following steps:
+10. Double-click on the activity and from the **Page Settings** window, do the following steps:
   * Click **Select** and from **Select Web Page**> **MyFirstModule** and click **New**.
   * Select an argument for a new page as *NewTool* object and click **OK**.
-  * Create a new page with following properties:
+  * Create a new page with the following properties:
   *  **Name**: *Tool_NewEdit_Page*.
   *  **Navigation layout**: **PopupLayout**, so this page appears as a popup over the Tools list page.
   *  Template Category: **Forms**.
   *  Page Template: **Form vertical**:
      <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page.png" alt="tool-new-edit-page-create-page" border="2" /></p> 
- Final page setting will look like as follows:
+ The final page setting will look like as follows:
   <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-new-edit-page-create-page-setting.png" alt="tool-new-edit-page-create-page-setting" border="2" /></p> 
 
   ## 6.2 Designing the Add Tool Page
@@ -223,7 +223,7 @@ You have created *Tool_NewEdit_Page* based on the Tool argument passed from the 
 
 
 ### 6.2.2 Creating a Microflow to Save Tools
-Now you will add a custom logic to validate the input before saving tool object in database. Depending on the validation an appropriate message will be displayed. Do the following steps to achieve this:
+Now you will add custom logic to validate the input before saving the tool object in the database. Depending on the validation an appropriate message will be displayed. Do the following steps to achieve this:
 
 1. Go to **Tool_NewEdit_Page** and double-click **Save**.
 2. Select **Call a microflow** from **Events On Click**.
