@@ -74,7 +74,7 @@ Now you will define the following entities in the Domain Model.
 
 1. Create an association between the **ToolImage** and the **Tool** entities by drawing a line:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association.png" alt="tool-image-tool-associatiom" border="2" /></p>
-2. Double-click the assocition link and select **[1-1]** association:
+2. Double-click the assocition link and select **[1-1]** multiplicity for the association:
       <p><img src="/attachements/build-a-responsive-web-app-using-mendix-platform/tool-image-tool-association-properties.png" alt="tool-image-tool-association-properties" border="2" /></p>
 3. Click **OK** to close the association’s properties window.
         
